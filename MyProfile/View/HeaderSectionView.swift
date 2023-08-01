@@ -12,7 +12,7 @@ class HeaderSectionView: UITableViewHeaderFooterView {
     static let ID = "HeaderView"
 
     private let titleLabel = UILabel()
-    private let clickButton = UIButton()
+    private let clickButton = UIButton(type: .system)
 
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
@@ -44,6 +44,7 @@ class HeaderSectionView: UITableViewHeaderFooterView {
 
     func setupClickButton() {
         contentView.addSubview(clickButton)
+        clickButton.tintColor = .black
         clickButton.translatesAutoresizingMaskIntoConstraints = false
         clickButton.setImage(UIImage(named: "pencil"), for: .normal)
     }

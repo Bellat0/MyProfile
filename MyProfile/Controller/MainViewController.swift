@@ -42,6 +42,7 @@ class MainViewController: UIViewController {
         tableView.dataSource = self
         tableView.estimatedSectionHeaderHeight = 0
         tableView.sectionHeaderHeight = UITableView.automaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
 
         tableView.register(
             HeaderSectionView.self,
@@ -50,6 +51,10 @@ class MainViewController: UIViewController {
         tableView.register(
             ProfileCell.self,
             forCellReuseIdentifier: ProfileCell.ID)
+
+        tableView.register(
+            AboutMeCell.self,
+            forCellReuseIdentifier: AboutMeCell.ID)
     }
 }
 
@@ -75,6 +80,14 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             
             return cell
+        } else if indexPath.section == 2 {
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: AboutMeCell.ID,
+                for: indexPath) as? AboutMeCell else { return UITableViewCell() }
+
+            cell.selectionStyle = .none
+
+            return cell
         }
 
         return UITableViewCell()
@@ -98,14 +111,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         }
 
         return headerView
-
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
             return 0
         } else {
-            return 30
+            return 40
         }
     }
 }

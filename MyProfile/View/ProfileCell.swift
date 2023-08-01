@@ -22,7 +22,7 @@ class ProfileCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         setupViews()
-        setupConstrints()
+        setupConstraints()
     }
 
     required init?(coder: NSCoder) {
@@ -70,7 +70,7 @@ class ProfileCell: UITableViewCell {
 
     }
 
-    private func setupConstrints() {
+    private func setupConstraints() {
 
         let heightContentView = NSLayoutConstraint(item: contentView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: contentView, attribute: NSLayoutConstraint.Attribute.height, multiplier: 0, constant: 287)
 

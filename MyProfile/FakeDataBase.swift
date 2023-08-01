@@ -7,4 +7,4 @@
 
 import Foundation
 
-var skillsArray = ["MVC/MVVM", "UiKit", "Git", "Swift", "SnapKit", "Alamofire"]
+var skillsArray = ["MVC/MVVM", "UiKit", "Git", "Swift", "SnapKit", "Alamofire", "+"]

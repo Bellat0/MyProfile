@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		941D0ECF2A79948F00C8F932 /* FakeDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D0ECE2A79948F00C8F932 /* FakeDataBase.swift */; };
+		941D0ED22A7997E400C8F932 /* AlertController + MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D0ED12A7997E400C8F932 /* AlertController + MainVC.swift */; };
 		946F54F12A79136C00EEABE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F54F02A79136C00EEABE0 /* AppDelegate.swift */; };
 		946F54F32A79136C00EEABE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F54F22A79136C00EEABE0 /* SceneDelegate.swift */; };
 		946F54F52A79136C00EEABE0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F54F42A79136C00EEABE0 /* MainViewController.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		941D0ECE2A79948F00C8F932 /* FakeDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDataBase.swift; sourceTree = "<group>"; };
+		941D0ED12A7997E400C8F932 /* AlertController + MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertController + MainVC.swift"; sourceTree = "<group>"; };
 		946F54ED2A79136C00EEABE0 /* MyProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		946F54F02A79136C00EEABE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		946F54F22A79136C00EEABE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		941D0ED02A7997CE00C8F932 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				941D0ED12A7997E400C8F932 /* AlertController + MainVC.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		946F54E42A79136C00EEABE0 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				941D0ECE2A79948F00C8F932 /* FakeDataBase.swift */,
+				941D0ED02A7997CE00C8F932 /* Extensions */,
 				946F55072A79159700EEABE0 /* Controller */,
 				946F55082A7916DF00EEABE0 /* View */,
 				946F553A2A79678200EEABE0 /* MySkills */,
@@ -206,6 +217,7 @@
 				946F55352A7950A800EEABE0 /* SkillsCollectionViewCell.swift in Sources */,
 				946F550A2A7916FF00EEABE0 /* ProfileCell.swift in Sources */,
 				946F553D2A7967B600EEABE0 /* SkillsCell.swift in Sources */,
+				941D0ED22A7997E400C8F932 /* AlertController + MainVC.swift in Sources */,
 				946F54F32A79136C00EEABE0 /* SceneDelegate.swift in Sources */,
 				946F55372A79516200EEABE0 /* HeaderSectionView.swift in Sources */,
 				941D0ECF2A79948F00C8F932 /* FakeDataBase.swift in Sources */,

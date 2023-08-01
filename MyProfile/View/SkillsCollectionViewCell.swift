@@ -17,12 +17,13 @@ class SkillsCollectionViewCell: UITableViewCell {
 
     static let ID = "SkillsCell"
 
-
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let vc = UICollectionView(frame: .zero, collectionViewLayout: layout)
         return vc
     }()
+
+    var presentAC: (() -> Void)?
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -78,6 +79,13 @@ extension SkillsCollectionViewCell: UICollectionViewDelegate, UICollectionViewDa
         cell.configureCell(title: skills)
         return cell
     }
+
+    //MARK: Collection view didselect item at
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presentAC?()
+        collectionView.reloadData()
+    }
 }
 
 //MARK: CollectionViewDelegateFlowLayout
@@ -86,7 +94,7 @@ extension SkillsCollectionViewCell: UICollectionViewDelegateFlowLayout  {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         if indexPath.row < skillsArray.count {
-            return CGSize(width: skillsArray[indexPath.row].size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 23)]).width + 40, height: 40)
+            return CGSize(width: skillsArray[indexPath.row].size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 23)]).width + 40, height: 50)
         } else {
             return CGSize(width: 100, height: 40)
         }

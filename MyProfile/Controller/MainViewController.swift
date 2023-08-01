@@ -92,7 +92,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 for: indexPath
             ) as? SkillsCollectionViewCell else { return UITableViewCell() }
 
-            
+            cell.presentAC = { [weak self] in
+                self?.createAc()
+            }
+
             return cell
 
         } else if indexPath.section == 2 {

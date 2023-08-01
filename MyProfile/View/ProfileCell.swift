@@ -56,6 +56,8 @@ class ProfileCell: UITableViewCell {
         aboutMeLabel.text = "Junior iOS-разработчик, опыт более 0 лет"
         aboutMeLabel.font = UIFont.systemFont(ofSize: 14)
         aboutMeLabel.textColor = Colors.LightGrayColor
+        aboutMeLabel.numberOfLines = 2
+        aboutMeLabel.textAlignment = .center
 
         contentView.addSubview(locationIconImage)
         locationIconImage.translatesAutoresizingMaskIntoConstraints = false

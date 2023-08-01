@@ -53,6 +53,10 @@ class MainViewController: UIViewController {
             forCellReuseIdentifier: ProfileCell.ID)
 
         tableView.register(
+            SkillsCollectionViewCell.self,
+            forCellReuseIdentifier: SkillsCollectionViewCell.ID)
+
+        tableView.register(
             AboutMeCell.self,
             forCellReuseIdentifier: AboutMeCell.ID)
     }
@@ -73,6 +77,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         if indexPath.section == 0 {
+
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: ProfileCell.ID,
                 for: indexPath) as? ProfileCell else { return UITableViewCell() }
@@ -80,7 +85,18 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             
             return cell
+        } else if indexPath.section == 1 {
+
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: SkillsCollectionViewCell.ID,
+                for: indexPath
+            ) as? SkillsCollectionViewCell else { return UITableViewCell() }
+
+            
+            return cell
+
         } else if indexPath.section == 2 {
+
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: AboutMeCell.ID,
                 for: indexPath) as? AboutMeCell else { return UITableViewCell() }
@@ -104,7 +120,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             return nil
         } else if section == 1 {
             headerView.configureTitle(title: "Мои навыки")
-            headerView.setupClickButton()
+            headerView.setupClickButton(isPressed: false)
             headerView.setupConstraintsClickButton()
         } else if section == 2 {
             headerView.configureTitle(title: "О себе")

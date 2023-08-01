@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = Colors.LightGrayColor
+        view.backgroundColor = Colors.LightGrayBGColor
         setupViews()
         setupConstraints()
         detailsTableView()
@@ -23,6 +23,7 @@ class MainViewController: UIViewController {
     private func setupViews() {
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.separatorStyle = .none
     }
 
     private func setupConstraints() {
@@ -39,10 +40,13 @@ class MainViewController: UIViewController {
         tableView.dataSource = self
 
         tableView.register(
-            MainTableViewCell.self,
-            forCellReuseIdentifier: MainTableViewCell.ID)
+            ProfileCell.self,
+            forCellReuseIdentifier: ProfileCell.ID)
     }
 }
+
+
+//MARK: Table view data source
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -54,10 +58,17 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: MainTableViewCell.ID,
-            for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
 
-        return cell
+        if indexPath.section == 0 {
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: ProfileCell.ID,
+                for: indexPath) as? ProfileCell else { return UITableViewCell() }
+
+//            cell.selectionStyle = .none
+            
+            return cell
+        }
+
+        return UITableViewCell()
     }
 }

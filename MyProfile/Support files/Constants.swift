@@ -8,5 +8,6 @@
 import UIKit
 
 enum Colors {
-    static let LightGrayColor = UIColor(red: 243/255, green: 243/255, blue: 245/255, alpha: 1)
+    static let LightGrayBGColor = UIColor(red: 243/255, green: 243/255, blue: 245/255, alpha: 1)
+    static let LightGrayColor = UIColor(red: 150/255, green: 149/255, blue: 156/255, alpha: 1)
 }

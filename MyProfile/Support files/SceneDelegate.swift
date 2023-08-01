@@ -24,6 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
             let mainVC = MainViewController()
             mainVC.title = "Профиль"
+            UINavigationBar.appearance().barTintColor = Colors.LightGrayBGColor
 
             return UINavigationController(rootViewController: mainVC)
         }

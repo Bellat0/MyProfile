@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = Colors.LightGrayBGColor
+
         setupViews()
         setupConstraints()
         detailsTableView()
@@ -24,6 +25,7 @@ class MainViewController: UIViewController {
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .white
     }
 
     private func setupConstraints() {
@@ -38,6 +40,12 @@ class MainViewController: UIViewController {
     private func detailsTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.estimatedSectionHeaderHeight = 0
+        tableView.sectionHeaderHeight = UITableView.automaticDimension
+
+        tableView.register(
+            HeaderSectionView.self,
+            forHeaderFooterViewReuseIdentifier: HeaderSectionView.ID)
 
         tableView.register(
             ProfileCell.self,
@@ -64,11 +72,40 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 withIdentifier: ProfileCell.ID,
                 for: indexPath) as? ProfileCell else { return UITableViewCell() }
 
-//            cell.selectionStyle = .none
+            cell.selectionStyle = .none
             
             return cell
         }
 
         return UITableViewCell()
+    }
+
+    //MARK: Table view header view
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let headerView = tableView.dequeueReusableHeaderFooterView(
+            withIdentifier: HeaderSectionView.ID
+        ) as? HeaderSectionView else { return  nil }
+
+        if section == 0 {
+            return nil
+        } else if section == 1 {
+            headerView.configureTitle(title: "Мои навыки")
+            headerView.setupClickButton()
+            headerView.setupConstraintsClickButton()
+        } else if section == 2 {
+            headerView.configureTitle(title: "О себе")
+        }
+
+        return headerView
+
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return 0
+        } else {
+            return 30
+        }
     }
 }

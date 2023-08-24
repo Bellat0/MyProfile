@@ -19,15 +19,14 @@ extension MainViewController {
         let cancelButtonAction = UIAlertAction(title: "Отмена", style: .cancel)
         let addButtonAction = UIAlertAction(title: "Добавить", style: .default) { action in
             let tf = ac.textFields?.first
-
             if let newText = tf?.text {
                 skillsArray.insert(newText, at: 0)
+
             }
         }
 
         ac.addAction(cancelButtonAction)
         ac.addAction(addButtonAction)
-
         self.present(ac, animated: true)
     }
 }

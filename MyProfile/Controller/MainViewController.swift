@@ -9,12 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-
-    //MARK: - Private properties
-
     private let tableView = UITableView()
-
-    //MARK: - Lyfe cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,16 +21,11 @@ class MainViewController: UIViewController {
         detailsTableView()
     }
 
-    //MARK: - Private views
-
     private func setupViews() {
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
-        tableView.estimatedSectionHeaderHeight = 0
-        tableView.sectionHeaderHeight = UITableView.automaticDimension
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 200
+        tableView.backgroundColor = .white
     }
 
     private func setupConstraints() {
@@ -50,6 +40,9 @@ class MainViewController: UIViewController {
     private func detailsTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.estimatedSectionHeaderHeight = 0
+        tableView.sectionHeaderHeight = UITableView.automaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
 
         tableView.register(
             HeaderSectionView.self,
@@ -70,7 +63,7 @@ class MainViewController: UIViewController {
 }
 
 
-//MARK: - Table view data source
+//MARK: Table view data source
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -89,23 +82,23 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 withIdentifier: ProfileCell.ID,
                 for: indexPath) as? ProfileCell else { return UITableViewCell() }
 
-            let profile = profileArray[indexPath.row]
-
-            cell.configureCell(profile: profile)
+            cell.selectionStyle = .none
             
             return cell
+        } else if indexPath.section == 1 {
 
-        }
-        //            else if indexPath.section == 1 {
-        //
-        //            guard let cell = tableView.dequeueReusableCell(
-        //                withIdentifier: SkillsCollectionViewCell.ID,
-        //                for: indexPath
-        //            ) as? SkillsCollectionViewCell else { return UITableViewCell() }
-        //
-        //            return cell
-        //
-        else if indexPath.section == 2 {
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: SkillsCollectionViewCell.ID,
+                for: indexPath
+            ) as? SkillsCollectionViewCell else { return UITableViewCell() }
+
+            cell.presentAC = { [weak self] in
+                self?.createAc()
+            }
+
+            return cell
+
+        } else if indexPath.section == 2 {
 
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: AboutMeCell.ID,
@@ -113,17 +106,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
             cell.selectionStyle = .none
 
-            let aboutMe = aboutMeDescription
-
-            cell.configureCell(aboutMe: aboutMe)
-
             return cell
         }
 
         return UITableViewCell()
     }
 
-    //MARK: - Table view header view
+    //MARK: Table view header view
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let headerView = tableView.dequeueReusableHeaderFooterView(
@@ -140,10 +129,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             headerView.configureTitle(title: "О себе")
         }
 
-        headerView.addButtonTapped = { [weak self] in
-            self?.createAc()
-        }
-
         return headerView
     }
 
@@ -151,7 +136,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         if section == 0 {
             return 0
         } else {
-            return 30
+            return 40
         }
     }
 }

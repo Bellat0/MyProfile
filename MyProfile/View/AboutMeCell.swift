@@ -27,6 +27,8 @@ class AboutMeCell: UITableViewCell {
     private func setupViews() {
         contentView.addSubview(descriptionLabel)
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        descriptionLabel.text = "iOS - developer \nС 2016 года по 2019 год работал дизайнером-инфографики в \"Министерстве Образования Республики Казахстан\" \nС 2019 года по 2020 год работал UX-аналитиком в \"Фонд образования Нурсултана Назарбаева\" \nС 2020 года занимался собственными проектами \nЕсть опыт преподавания языка Swift на курсах по программированию"
+
         descriptionLabel.numberOfLines = 0
         descriptionLabel.font = UIFont.systemFont(ofSize: 14)
     }
@@ -38,11 +40,5 @@ class AboutMeCell: UITableViewCell {
         let pinBottDescriptionLabel = NSLayoutConstraint(item: descriptionLabel, attribute: .bottom, relatedBy: .equal, toItem: contentView, attribute: .bottom, multiplier: 1, constant: 0)
 
         contentView.addConstraints([pinLeftDescriptionLabel, pinTopDescriptionLabel, pinRightDescriptionLabel, pinBottDescriptionLabel])
-    }
-
-    //MARK: - Configure cell
-
-    func configureCell(aboutMe: AboutMe) {
-        self.descriptionLabel.text = aboutMe.title
     }
 }

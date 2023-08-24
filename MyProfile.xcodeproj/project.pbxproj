@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		941D0ECF2A79948F00C8F932 /* FakeDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D0ECE2A79948F00C8F932 /* FakeDataBase.swift */; };
+		941D0ECF2A79948F00C8F932 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D0ECE2A79948F00C8F932 /* DataBase.swift */; };
 		941D0ED22A7997E400C8F932 /* AlertController + MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D0ED12A7997E400C8F932 /* AlertController + MainVC.swift */; };
 		946F54F12A79136C00EEABE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F54F02A79136C00EEABE0 /* AppDelegate.swift */; };
 		946F54F32A79136C00EEABE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F54F22A79136C00EEABE0 /* SceneDelegate.swift */; };
@@ -21,10 +21,11 @@
 		946F55372A79516200EEABE0 /* HeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F55362A79516200EEABE0 /* HeaderSectionView.swift */; };
 		946F55392A795B5200EEABE0 /* AboutMeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F55382A795B5200EEABE0 /* AboutMeCell.swift */; };
 		946F553D2A7967B600EEABE0 /* SkillsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F553C2A7967B600EEABE0 /* SkillsCell.swift */; };
+		94EF85E92A9798B200B7242D /* AppModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EF85E82A9798B200B7242D /* AppModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		941D0ECE2A79948F00C8F932 /* FakeDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDataBase.swift; sourceTree = "<group>"; };
+		941D0ECE2A79948F00C8F932 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		941D0ED12A7997E400C8F932 /* AlertController + MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertController + MainVC.swift"; sourceTree = "<group>"; };
 		946F54ED2A79136C00EEABE0 /* MyProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		946F54F02A79136C00EEABE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		946F55362A79516200EEABE0 /* HeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSectionView.swift; sourceTree = "<group>"; };
 		946F55382A795B5200EEABE0 /* AboutMeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeCell.swift; sourceTree = "<group>"; };
 		946F553C2A7967B600EEABE0 /* SkillsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsCell.swift; sourceTree = "<group>"; };
+		94EF85E82A9798B200B7242D /* AppModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +83,8 @@
 		946F54EF2A79136C00EEABE0 /* MyProfile */ = {
 			isa = PBXGroup;
 			children = (
-				941D0ECE2A79948F00C8F932 /* FakeDataBase.swift */,
+				941D0ECE2A79948F00C8F932 /* DataBase.swift */,
+				94EF85E72A9798A300B7242D /* Model */,
 				941D0ED02A7997CE00C8F932 /* Extensions */,
 				946F55072A79159700EEABE0 /* Controller */,
 				946F55082A7916DF00EEABE0 /* View */,
@@ -137,6 +140,14 @@
 				946F553C2A7967B600EEABE0 /* SkillsCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		94EF85E72A9798A300B7242D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				94EF85E82A9798B200B7242D /* AppModels.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +224,7 @@
 				946F550C2A79193D00EEABE0 /* Constants.swift in Sources */,
 				946F55392A795B5200EEABE0 /* AboutMeCell.swift in Sources */,
 				946F54F52A79136C00EEABE0 /* MainViewController.swift in Sources */,
+				94EF85E92A9798B200B7242D /* AppModels.swift in Sources */,
 				946F54F12A79136C00EEABE0 /* AppDelegate.swift in Sources */,
 				946F55352A7950A800EEABE0 /* SkillsCollectionViewCell.swift in Sources */,
 				946F550A2A7916FF00EEABE0 /* ProfileCell.swift in Sources */,
@@ -220,7 +232,7 @@
 				941D0ED22A7997E400C8F932 /* AlertController + MainVC.swift in Sources */,
 				946F54F32A79136C00EEABE0 /* SceneDelegate.swift in Sources */,
 				946F55372A79516200EEABE0 /* HeaderSectionView.swift in Sources */,
-				941D0ECF2A79948F00C8F932 /* FakeDataBase.swift in Sources */,
+				941D0ECF2A79948F00C8F932 /* DataBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

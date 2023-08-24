@@ -12,7 +12,7 @@ class SkillsCollectionViewCell: UITableViewCell {
     //MARK: Enum for CollectionView Insets
 
     private enum Layout {
-        static let insets: UIEdgeInsets = UIEdgeInsets(top: 12, left: 16, bottom: 12, right: 16)
+        static let insets: UIEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
     }
 
     static let ID = "SkillsCell"
@@ -40,6 +40,7 @@ class SkillsCollectionViewCell: UITableViewCell {
     private func setupViews() {
         contentView.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+//        collectionView.backgroundColor = .blue
     }
 
     private func setupConstraints() {
@@ -49,7 +50,8 @@ class SkillsCollectionViewCell: UITableViewCell {
         let pinBot = NSLayoutConstraint(item: collectionView, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: contentView, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: 0)
         let heightContentView = NSLayoutConstraint(item: contentView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: contentView, attribute: NSLayoutConstraint.Attribute.height, multiplier: 0, constant: 200)
 
-        contentView.addConstraints([pinLeft, pinTop, pinRight, pinBot, heightContentView])
+
+        contentView.addConstraints([pinLeft, pinTop, pinRight, pinBot, heightContentView, heightContentView])
     }
 
     private func detailsCollectionView() {
@@ -75,16 +77,22 @@ extension SkillsCollectionViewCell: UICollectionViewDelegate, UICollectionViewDa
             for: indexPath
         ) as? SkillsCell else { return UICollectionViewCell() }
 
+        cell.deleteButtonDeleteAction = {
+            if indexPath.row < skillsArray.count  {
+                skillsArray.remove(at: indexPath.row)
+                collectionView.deleteItems(at: [indexPath])
+            }
+        }
+
         let skills = skillsArray[indexPath.row]
         cell.configureCell(title: skills)
+
         return cell
     }
 
     //MARK: Collection view didselect item at
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presentAC?()
-        collectionView.reloadData()
     }
 }
 
@@ -94,7 +102,7 @@ extension SkillsCollectionViewCell: UICollectionViewDelegateFlowLayout  {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         if indexPath.row < skillsArray.count {
-            return CGSize(width: skillsArray[indexPath.row].size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 23)]).width + 40, height: 50)
+            return CGSize(width: skillsArray[indexPath.row].size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 23)]).width + 50, height: 50)
         } else {
             return CGSize(width: 100, height: 40)
         }
@@ -112,6 +120,6 @@ extension SkillsCollectionViewCell: UICollectionViewDelegateFlowLayout  {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
 
-        return Layout.insets.bottom
+        return 10
     }
 }

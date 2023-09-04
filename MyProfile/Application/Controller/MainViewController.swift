@@ -12,7 +12,8 @@ class MainViewController: UIViewController {
 
     //MARK: - Private properties
 
-    private let tableView = UITableView()
+    let tableView = UITableView()
+    private var mySkills = MySkills()
 
     //MARK: - Lyfe cycle
 
@@ -78,7 +79,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -89,23 +90,29 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 withIdentifier: ProfileCell.ID,
                 for: indexPath) as? ProfileCell else { return UITableViewCell() }
 
-            let profile = profileArray[indexPath.row]
+            let profile = DataBase.profileArray[indexPath.row]
 
             cell.configureCell(profile: profile)
             
             return cell
 
         }
-        //            else if indexPath.section == 1 {
-        //
-        //            guard let cell = tableView.dequeueReusableCell(
-        //                withIdentifier: SkillsCollectionViewCell.ID,
-        //                for: indexPath
-        //            ) as? SkillsCollectionViewCell else { return UITableViewCell() }
-        //
-        //            return cell
-        //
-        else if indexPath.section == 2 {
+        else if indexPath.section == 1 {
+
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: SkillsCollectionViewCell.ID,
+                for: indexPath
+            ) as? SkillsCollectionViewCell else { return UITableViewCell() }
+
+            cell.reloadData()
+        
+            cell.presentAC = { [weak self] in
+                self?.createAc()
+            }
+
+            return cell
+
+        } else if indexPath.section == 2 {
 
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: AboutMeCell.ID,
@@ -113,7 +120,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
             cell.selectionStyle = .none
 
-            let aboutMe = aboutMeDescription
+            let aboutMe = DataBase.aboutMeDescription
 
             cell.configureCell(aboutMe: aboutMe)
 
@@ -128,20 +135,23 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let headerView = tableView.dequeueReusableHeaderFooterView(
             withIdentifier: HeaderSectionView.ID
-        ) as? HeaderSectionView else { return  nil }
+        ) as? HeaderSectionView else { return nil }
 
-        if section == 0 {
+        switch section {
+        case 0:
             return nil
-        } else if section == 1 {
+        case 1:
             headerView.configureTitle(title: "Мои навыки")
-            headerView.setupClickButton(isPressed: false)
-            headerView.setupConstraintsClickButton()
-        } else if section == 2 {
-            headerView.configureTitle(title: "О себе")
-        }
+            headerView.addEditButton(isSelected: mySkills.isSelected)
 
-        headerView.addButtonTapped = { [weak self] in
-            self?.createAc()
+            headerView.editButtonTapped = { [weak self] in
+                self?.mySkills.isSelected.toggle()
+                self?.tableView.reloadData()
+            }
+        case 2:
+            headerView.configureTitle(title: "О себе")
+        default:
+            break
         }
 
         return headerView

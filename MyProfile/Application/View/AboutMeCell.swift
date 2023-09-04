@@ -11,7 +11,11 @@ class AboutMeCell: UITableViewCell {
 
     static let ID = "AboutMeCell"
 
+    //MARK: - Private properties
+
     private let descriptionLabel = UILabel()
+
+    //MARK: Lyfe cycle
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -24,6 +28,8 @@ class AboutMeCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    //MARK: - Private methods
+    
     private func setupViews() {
         contentView.addSubview(descriptionLabel)
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false

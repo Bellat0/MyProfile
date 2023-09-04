@@ -55,7 +55,7 @@ class SkillsCollectionViewCell: UITableViewCell {
         let pinTop = NSLayoutConstraint(item: collectionView, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: contentView.safeAreaLayoutGuide, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: 0)
         let pinRight = NSLayoutConstraint(item: collectionView, attribute: NSLayoutConstraint.Attribute.right, relatedBy: NSLayoutConstraint.Relation.equal, toItem: contentView, attribute: NSLayoutConstraint.Attribute.right, multiplier: 1, constant: 0)
         let pinBot = NSLayoutConstraint(item: collectionView, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: contentView, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: 0)
-        let heightContentView = NSLayoutConstraint(item: contentView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: contentView, attribute: NSLayoutConstraint.Attribute.height, multiplier: 0, constant: 200)
+        let heightContentView = NSLayoutConstraint(item: contentView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: contentView, attribute: NSLayoutConstraint.Attribute.height, multiplier: 0, constant: 250)
 
 
         contentView.addConstraints([pinLeft, pinTop, pinRight, pinBot, heightContentView])
@@ -69,13 +69,19 @@ class SkillsCollectionViewCell: UITableViewCell {
             SkillsCell.self,
             forCellWithReuseIdentifier: SkillsCell.ID)
     }
+
+    //MARK: - Support methods
+
+    func reloadData() {
+        collectionView.reloadData()
+    }
 }
 
 //MARK: - Collection view data source
 
 extension SkillsCollectionViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return skillsArray.count
+        return DataBase.skillsArray.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -85,13 +91,13 @@ extension SkillsCollectionViewCell: UICollectionViewDelegate, UICollectionViewDa
         ) as? SkillsCell else { return UICollectionViewCell() }
 
         cell.deleteButtonDeleteAction = {
-            if indexPath.row < skillsArray.count  {
-                skillsArray.remove(at: indexPath.row)
+            if indexPath.row < DataBase.skillsArray.count  {
+                DataBase.skillsArray.remove(at: indexPath.row)
                 collectionView.deleteItems(at: [indexPath])
             }
         }
 
-        let skills = skillsArray[indexPath.row]
+        let skills = DataBase.skillsArray[indexPath.row]
         cell.configureCell(title: skills)
 
         return cell
@@ -100,6 +106,7 @@ extension SkillsCollectionViewCell: UICollectionViewDelegate, UICollectionViewDa
     //MARK: - Collection view didSelectItemAt
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presentAC?()
     }
 }
 
@@ -108,7 +115,7 @@ extension SkillsCollectionViewCell: UICollectionViewDelegate, UICollectionViewDa
 extension SkillsCollectionViewCell: UICollectionViewDelegateFlowLayout  {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let dataBase = skillsArray[indexPath.row]
+        let dataBase = DataBase.skillsArray[indexPath.row]
 
         let availableWidth = collectionView.frame.width - 16 - 16
 

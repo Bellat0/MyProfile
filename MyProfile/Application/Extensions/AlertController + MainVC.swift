@@ -21,7 +21,8 @@ extension MainViewController {
             let tf = ac.textFields?.first
 
             if let newText = tf?.text {
-                skillsArray.insert(newText, at: 0)
+                DataBase.skillsArray.insert(newText, at: 0)
+                self.tableView.reloadData()
             }
         }
 

@@ -14,6 +14,10 @@ struct ProfileModel {
     let location: String
 }
 
+struct MySkills {
+    var isSelected: Bool = true
+}
+
 struct AboutMe {
     let title: String
 }

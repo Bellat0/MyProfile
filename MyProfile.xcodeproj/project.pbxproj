@@ -8,40 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		941D0ECF2A79948F00C8F932 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D0ECE2A79948F00C8F932 /* DataBase.swift */; };
-		941D0ED22A7997E400C8F932 /* AlertController + MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D0ED12A7997E400C8F932 /* AlertController + MainVC.swift */; };
+		941D0ED22A7997E400C8F932 /* Extensions + ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D0ED12A7997E400C8F932 /* Extensions + ProfileVC.swift */; };
+		946A45E22BA971D4003D814C /* ProfileViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A45E12BA971D4003D814C /* ProfileViewController + TableView.swift */; };
 		946F54F12A79136C00EEABE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F54F02A79136C00EEABE0 /* AppDelegate.swift */; };
 		946F54F32A79136C00EEABE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F54F22A79136C00EEABE0 /* SceneDelegate.swift */; };
-		946F54F52A79136C00EEABE0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F54F42A79136C00EEABE0 /* MainViewController.swift */; };
+		946F54F52A79136C00EEABE0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F54F42A79136C00EEABE0 /* ProfileViewController.swift */; };
 		946F54FD2A79136D00EEABE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 946F54FB2A79136D00EEABE0 /* LaunchScreen.storyboard */; };
 		946F55052A7913A400EEABE0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 946F55042A7913A400EEABE0 /* .gitignore */; };
-		946F550A2A7916FF00EEABE0 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F55092A7916FF00EEABE0 /* ProfileCell.swift */; };
+		946F550A2A7916FF00EEABE0 /* UserInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F55092A7916FF00EEABE0 /* UserInfoCell.swift */; };
 		946F550C2A79193D00EEABE0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F550B2A79193D00EEABE0 /* Constants.swift */; };
 		946F55312A793FB800EEABE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946F55302A793FB800EEABE0 /* Assets.xcassets */; };
-		946F55352A7950A800EEABE0 /* SkillsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F55342A7950A800EEABE0 /* SkillsCollection.swift */; };
-		946F55372A79516200EEABE0 /* HeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F55362A79516200EEABE0 /* HeaderSectionView.swift */; };
 		946F55392A795B5200EEABE0 /* AboutMeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F55382A795B5200EEABE0 /* AboutMeCell.swift */; };
-		946F553D2A7967B600EEABE0 /* SkillsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F553C2A7967B600EEABE0 /* SkillsCell.swift */; };
-		94EF85E92A9798B200B7242D /* AppModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EF85E82A9798B200B7242D /* AppModels.swift */; };
+		94D6955E2AB09306007092A4 /* HeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D6955D2AB09306007092A4 /* HeaderSectionView.swift */; };
+		94D695642AB0B846007092A4 /* MySkillsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D695632AB0B846007092A4 /* MySkillsCollection.swift */; };
+		94D695662AB0B9CC007092A4 /* MySkillsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D695652AB0B9CC007092A4 /* MySkillsCell.swift */; };
+		94EF85E92A9798B200B7242D /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EF85E82A9798B200B7242D /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		941D0ECE2A79948F00C8F932 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
-		941D0ED12A7997E400C8F932 /* AlertController + MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertController + MainVC.swift"; sourceTree = "<group>"; };
+		941D0ED12A7997E400C8F932 /* Extensions + ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + ProfileVC.swift"; sourceTree = "<group>"; };
+		946A45E12BA971D4003D814C /* ProfileViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController + TableView.swift"; sourceTree = "<group>"; };
 		946F54ED2A79136C00EEABE0 /* MyProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		946F54F02A79136C00EEABE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		946F54F22A79136C00EEABE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		946F54F42A79136C00EEABE0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		946F54F42A79136C00EEABE0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		946F54FC2A79136D00EEABE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		946F54FE2A79136D00EEABE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		946F55042A7913A400EEABE0 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		946F55092A7916FF00EEABE0 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		946F55092A7916FF00EEABE0 /* UserInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCell.swift; sourceTree = "<group>"; };
 		946F550B2A79193D00EEABE0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		946F55302A793FB800EEABE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		946F55342A7950A800EEABE0 /* SkillsCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsCollection.swift; sourceTree = "<group>"; };
-		946F55362A79516200EEABE0 /* HeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSectionView.swift; sourceTree = "<group>"; };
 		946F55382A795B5200EEABE0 /* AboutMeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeCell.swift; sourceTree = "<group>"; };
-		946F553C2A7967B600EEABE0 /* SkillsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsCell.swift; sourceTree = "<group>"; };
-		94EF85E82A9798B200B7242D /* AppModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModels.swift; sourceTree = "<group>"; };
+		94D6955D2AB09306007092A4 /* HeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSectionView.swift; sourceTree = "<group>"; };
+		94D695632AB0B846007092A4 /* MySkillsCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySkillsCollection.swift; sourceTree = "<group>"; };
+		94D695652AB0B9CC007092A4 /* MySkillsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySkillsCell.swift; sourceTree = "<group>"; };
+		94EF85E82A9798B200B7242D /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +57,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		941D0ED02A7997CE00C8F932 /* Extensions */ = {
+		941D0ED02A7997CE00C8F932 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				941D0ED12A7997E400C8F932 /* AlertController + MainVC.swift */,
+				941D0ECE2A79948F00C8F932 /* DataBase.swift */,
+				941D0ED12A7997E400C8F932 /* Extensions + ProfileVC.swift */,
 			);
-			path = Extensions;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		946A45E32BA97205003D814C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				946F54F02A79136C00EEABE0 /* AppDelegate.swift */,
+				946F54F22A79136C00EEABE0 /* SceneDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 		946F54E42A79136C00EEABE0 = {
@@ -83,29 +95,33 @@
 		946F54EF2A79136C00EEABE0 /* MyProfile */ = {
 			isa = PBXGroup;
 			children = (
-				94EF85EA2A979EB000B7242D /* Application */,
-				946F55062A79155000EEABE0 /* Support files */,
+				94EF85E72A9798A300B7242D /* Model */,
+				946F55082A7916DF00EEABE0 /* View */,
+				946F55072A79159700EEABE0 /* Controller */,
+				941D0ED02A7997CE00C8F932 /* Services */,
+				94EF85EA2A979EB000B7242D /* 321 */,
+				946A45E32BA97205003D814C /* Application */,
+				946F55062A79155000EEABE0 /* Supporting files */,
 			);
 			path = MyProfile;
 			sourceTree = "<group>";
 		};
-		946F55062A79155000EEABE0 /* Support files */ = {
+		946F55062A79155000EEABE0 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				946F54F02A79136C00EEABE0 /* AppDelegate.swift */,
-				946F54F22A79136C00EEABE0 /* SceneDelegate.swift */,
+				946F550B2A79193D00EEABE0 /* Constants.swift */,
 				946F54FB2A79136D00EEABE0 /* LaunchScreen.storyboard */,
 				946F54FE2A79136D00EEABE0 /* Info.plist */,
-				946F550B2A79193D00EEABE0 /* Constants.swift */,
 				946F55302A793FB800EEABE0 /* Assets.xcassets */,
 			);
-			path = "Support files";
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 		946F55072A79159700EEABE0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				946F54F42A79136C00EEABE0 /* MainViewController.swift */,
+				946F54F42A79136C00EEABE0 /* ProfileViewController.swift */,
+				946A45E12BA971D4003D814C /* ProfileViewController + TableView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -113,57 +129,52 @@
 		946F55082A7916DF00EEABE0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				946F55092A7916FF00EEABE0 /* ProfileCell.swift */,
-				946F55362A79516200EEABE0 /* HeaderSectionView.swift */,
+				946F55092A7916FF00EEABE0 /* UserInfoCell.swift */,
+				94D6955D2AB09306007092A4 /* HeaderSectionView.swift */,
 				946F55382A795B5200EEABE0 /* AboutMeCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		946F553A2A79678200EEABE0 /* MySkills */ = {
+		94D6955F2AB0B7ED007092A4 /* MySkills */ = {
 			isa = PBXGroup;
 			children = (
-				946F6E3A2AA60EBC002A5AB3 /* Controller */,
-				946F553B2A79679400EEABE0 /* View */,
+				94D695602AB0B7FF007092A4 /* Controller */,
+				94D695612AB0B804007092A4 /* View */,
 			);
 			path = MySkills;
 			sourceTree = "<group>";
 		};
-		946F553B2A79679400EEABE0 /* View */ = {
+		94D695602AB0B7FF007092A4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				946F553C2A7967B600EEABE0 /* SkillsCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		946F6E3A2AA60EBC002A5AB3 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				946F55342A7950A800EEABE0 /* SkillsCollection.swift */,
+				94D695632AB0B846007092A4 /* MySkillsCollection.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		94D695612AB0B804007092A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94D695652AB0B9CC007092A4 /* MySkillsCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		94EF85E72A9798A300B7242D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				94EF85E82A9798B200B7242D /* AppModels.swift */,
+				94EF85E82A9798B200B7242D /* Profile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		94EF85EA2A979EB000B7242D /* Application */ = {
+		94EF85EA2A979EB000B7242D /* 321 */ = {
 			isa = PBXGroup;
 			children = (
-				941D0ECE2A79948F00C8F932 /* DataBase.swift */,
-				94EF85E72A9798A300B7242D /* Model */,
-				941D0ED02A7997CE00C8F932 /* Extensions */,
-				946F55072A79159700EEABE0 /* Controller */,
-				946F55082A7916DF00EEABE0 /* View */,
-				946F553A2A79678200EEABE0 /* MySkills */,
+				94D6955F2AB0B7ED007092A4 /* MySkills */,
 			);
-			path = Application;
+			path = 321;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +205,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					946F54EC2A79136C00EEABE0 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -237,18 +248,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				946A45E22BA971D4003D814C /* ProfileViewController + TableView.swift in Sources */,
 				946F550C2A79193D00EEABE0 /* Constants.swift in Sources */,
 				946F55392A795B5200EEABE0 /* AboutMeCell.swift in Sources */,
-				946F54F52A79136C00EEABE0 /* MainViewController.swift in Sources */,
-				94EF85E92A9798B200B7242D /* AppModels.swift in Sources */,
+				946F54F52A79136C00EEABE0 /* ProfileViewController.swift in Sources */,
+				94EF85E92A9798B200B7242D /* Profile.swift in Sources */,
+				94D695642AB0B846007092A4 /* MySkillsCollection.swift in Sources */,
 				946F54F12A79136C00EEABE0 /* AppDelegate.swift in Sources */,
-				946F55352A7950A800EEABE0 /* SkillsCollection.swift in Sources */,
-				946F550A2A7916FF00EEABE0 /* ProfileCell.swift in Sources */,
-				946F553D2A7967B600EEABE0 /* SkillsCell.swift in Sources */,
-				941D0ED22A7997E400C8F932 /* AlertController + MainVC.swift in Sources */,
+				946F550A2A7916FF00EEABE0 /* UserInfoCell.swift in Sources */,
+				941D0ED22A7997E400C8F932 /* Extensions + ProfileVC.swift in Sources */,
 				946F54F32A79136C00EEABE0 /* SceneDelegate.swift in Sources */,
-				946F55372A79516200EEABE0 /* HeaderSectionView.swift in Sources */,
+				94D695662AB0B9CC007092A4 /* MySkillsCell.swift in Sources */,
 				941D0ECF2A79948F00C8F932 /* DataBase.swift in Sources */,
+				94D6955E2AB09306007092A4 /* HeaderSectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +282,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -302,6 +315,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -330,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -362,6 +377,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -389,7 +405,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J8L5S42HGH;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MyProfile/Support files/Info.plist";
+				INFOPLIST_FILE = "MyProfile/Supporting files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -420,7 +436,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J8L5S42HGH;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MyProfile/Support files/Info.plist";
+				INFOPLIST_FILE = "MyProfile/Supporting files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
